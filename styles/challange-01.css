@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: lightgray;
+    margin: auto;
+    width: 60vw;
+    height: 60vh;
+    padding: 30px;
+}
+
+.main-form {
+    margin: auto;
+    border: 1px solid darkslategray;
+    padding: 20px;
+}
+
+label, input {
+    display: block;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 2px 0px 2px 5px;
+}
+
+button {
+    background-color: lightgreen;
+    width: 150x;
+    height: 40px;
+    padding: 10px 20px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+button:hover {
+    box-sizing: border-box;
+    border: 2px solid black;
+}
