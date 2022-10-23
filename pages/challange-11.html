@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/general-styles.css" />
+    <title>Challange 11</title>
+  </head>
+  <body>
+    <main>
+      <h2>Cadastrar produto</h2>
+      <form action="">
+        <div class="form-group">
+          <label for="nome_produto">
+            Nome
+            <input
+              class="form-control"
+              type="text"
+              name="nome_produto"
+              id="nome_produto"
+              minlength="2"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="marca_produto">
+            Marca
+            <input
+              class="form-control"
+              type="text"
+              name="marca"
+              id="marca_produto"
+              minlength="2"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="prec_produto">
+            Preço
+            <input
+              class="form-control"
+              type="number"
+              name="preco_produto"
+              id="preco_produto"
+            />
+          </label>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">
+            Cadastrar
+          </button>
+        </div>
+      </form>
+
+      <h2>Produtos cadastrados</h2>
+
+      <table class="table table-striped">
+        <tr>
+          <th>Nome</th>
+          <th>Marca</th>
+          <th>Valor</th>
+        </tr>
+        <tr>
+          <td>teste</td>
+          <td>teste</td>
+          <td>teste</td>
+        </tr>
+        <tr>
+          <td>teste</td>
+          <td>teste</td>
+          <td>teste</td>
+        </tr>
+        <tr>
+          <td>teste</td>
+          <td>teste</td>
+          <td>teste</td>
+        </tr>
+      </table>
+    </main>
+  </body>
+</html>
