@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challange 03</title>
-</head>
-<body>
+  </head>
+  <body>
+    <label for="cidades">Escolha uma cidade</label>
+    <select name="cidades" id="cidades">
+      <option value="cuiaba">Cuiabá</option>
+      <option value="varzea-grande">Várzea Grande</option>
+      <option value="chapada">Chapada</option>
+    </select>
+    <br />
 
-    <form action="">
+    <button type="button" onclick="exibirDescricao()">Exibir descrição</button>
+    <hr />
 
-        <label for="cidades">Escolha uma cidade</label>
-        <select name="cidades" id="">
-            <option value="cuiaba">Cuiabá</option>
-            <option value="vazea-grande">Várzea Grande</option>
-            <option value="santo-antonio">Santo Antônio</option>
-        </select>
+    <p id="descricao"></p>
 
-    </form>
-    
-</body>
+    <script>
+      function exibirDescricao() {
+        var cidades = document.getElementById("cidades");
+
+        selectedCity = cidades.options[cidades.options.selectedIndex].value;
+
+        var description = "";
+        switch (selectedCity) {
+          case "cuiaba":
+            description = "Muito quente";
+            break;
+          case "varzea-grande":
+            description = "Quente";
+            break;
+          case "chapada":
+            description = "Amenozinho";
+            break;
+        }
+        document.getElementById("descricao").innerHTML = description;
+      }
+    </script>
+  </body>
 </html>
