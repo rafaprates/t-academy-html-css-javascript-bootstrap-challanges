@@ -14,51 +14,74 @@
   <body>
     <main>
       <h2>Qual é o menor número?</h2>
-      <form action="">
-        <div class="form-group">
-          <div class="input-number number-01">
-            <label for="number-01">
-              Número 01
-              <input
-                class="form-control"
-                type="number"
-                name="number_01"
-                id="number-01"
-                required
-              />
-            </label>
-          </div>
-
-          <div class="input-number number-02">
-            <label for="number-02">
-              Número 02
-              <input
-                class="form-control"
-                type="number"
-                name="number_02"
-                id="number-02"
-                required
-              />
-            </label>
-          </div>
-
-          <div class="input-number number-03">
-            <label for="number-03">
-              Número 03
-              <input
-                class="form-control"
-                type="number"
-                name="number_03"
-                id="number-03"
-                required
-              />
-            </label>
-          </div>
-          <button class="btn btn-primary btn-block" type="submit">
-            Calcular
-          </button>
+      <div class="form-group">
+        <div class="input-number number-01">
+          <label for="number-01">
+            Número 01
+            <input
+              class="form-control"
+              type="number"
+              name="number_01"
+              id="number-01"
+              required
+            />
+          </label>
         </div>
-      </form>
+
+        <div class="input-number number-02">
+          <label for="number-02">
+            Número 02
+            <input
+              class="form-control"
+              type="number"
+              name="number_02"
+              id="number-02"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="input-number number-03">
+          <label for="number-03">
+            Número 03
+            <input
+              class="form-control"
+              type="number"
+              name="number_03"
+              id="number-03"
+              required
+            />
+          </label>
+        </div>
+        <button
+          onclick="obterMenorNumero()"
+          class="btn btn-primary btn-block"
+          type="submit"
+        >
+          Calcular
+        </button>
+
+        <h2>O menor número é:</h2>
+        <p id="smallest"></p>
+      </div>
     </main>
+
+    <script>
+      function obterMenorNumero() {
+        var formControlElements =
+          document.getElementsByClassName("form-control");
+
+        var smallest = formControlElements[0].value;
+        for (i of formControlElements) {
+          if (i.value < smallest) {
+            smallest = i.value;
+          }
+        }
+
+        document.getElementById("smallest").innerHTML = smallest;
+
+        console.log(smallest);
+      }
+    </script>
   </body>
 </html>
