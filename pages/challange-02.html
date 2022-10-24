@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Challange 02</title>
 
     <style>
-        label {
-            margin-bottom: 15px;
-        }
+      label {
+        margin-bottom: 15px;
+      }
 
-        input {
-            margin-bottom: 15px;
-        }
+      input {
+        margin-bottom: 15px;
+      }
     </style>
-
-</head>
-<body>
-
+  </head>
+  <body>
     <form action="">
+      <label for="valor">Valor</label>
+      <input type="number" name="valor" id="valor" />
+      <br />
 
-        <label for="">Valor</label>
-        <input type="number" name="" id="">
-        <br>
+      <input type="radio" name="metodo-pagamento" id="a-vista" value="aVista" />
+      <label for="a-vista">À vista</label>
 
-        <input type="radio" name="metodo-pagamento" id="">
-        <label for="a-vista">À vista</label>
+      <input type="radio" name="metodo-pagamento" id="a-prazo" value="aPrazo" />
+      <label for="a-prazo">À prazo</label>
+      <br />
 
-        <input type="radio" name="metodo-pagamento" id="">
-        <label for="a-prazo">À prazo</label>
-        <br>
+      <button type="button" onclick="calcularDesconto()">
+        Calcular desconto
+      </button>
+      <hr />
 
-        <label for="a-prazo">Valor total</label>
-        <input type="number" readonly>
+      <label for="valor-total" readonly>Valor total</label>
+      <input type="number" id="valor-total" readonly />
     </form>
-    
-</body>
+
+    <script>
+      function calcularDesconto() {
+        const desconto = 10 / 100;
+        var valor = parseFloat(document.getElementById("valor").value);
+        var metodoPagamento = document.querySelector(
+          "input[name=metodo-pagamento]:checked"
+        ).value;
+        var valorTotalElement = document.getElementById("valor-total");
+
+        if (valor >= 100 && metodoPagamento === "aVista") {
+          valorTotalElement.value = valor - valor * desconto;
+        } else {
+          valorTotalElement.value = valor;
+        }
+      }
+    </script>
+  </body>
 </html>
