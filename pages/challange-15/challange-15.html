@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Challange 15</title>
+  </head>
+  <body>
+    <div class="container login">
+      <nav class="nav nav-tabs nav-fill">
+        <a class="nav-link active" href="challange-15.html">Início</a>
+        <a class="nav-link" href="gerenciar-marcas.html">Marcas</a>
+        <a class="nav-link" href="gerenciar-produtos.html">Produtos</a>
+      </nav>
+
+      <div class="form-group">
+        <label for="userName" class="form-label">
+          Usuário
+          <input
+            type="text"
+            name="userName"
+            id="userName"
+            class="form-control"
+            required
+          />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">
+          Senha
+          <input type="password" id="password" class="form-control" required />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <button onclick="authenticateUser()" class="btn btn-primary">
+          Entrar
+        </button>
+      </div>
+    </div>
+
+    <hr />
+    <div class="container options">
+      <h1>Opções</h1>
+      <button class="btn btn-primary">Gerenciar marcas</button>
+      <button class="btn btn-primary">Gerenciar produtos</button>
+      <button class="btn btn-primary">Finalizar</button>
+    </div>
+
+    <hr />
+
+    <div class="container gerenciar-marcas">
+      <h1>Gerenciar marcas</h1>
+      <button class="btn btn-primary">Cadastrar</button>
+      <button class="btn btn-primary">Listar</button>
+      <button class="btn btn-primary">Remover</button>
+    </div>
+
+    <hr />
+
+    <div class="container gerenciar-marcas">
+      <h1>Gerenciar produtos</h1>
+      <button class="btn btn-primary">Cadastrar</button>
+      <button class="btn btn-primary">Listar</button>
+      <button class="btn btn-primary">Remover</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
