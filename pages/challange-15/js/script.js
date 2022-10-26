@@ -66,8 +66,6 @@ function cadastrarMarca() {
   var nomeMarca = document.getElementById("nomeMarca").value;
 
   if (validarNomeMarca(nomeMarca)) {
-    // cadastrar(nomeMarca);
-    console.log(nomeMarca);
     marcas.push({
       nomeMarca: nomeMarca,
     });
@@ -165,9 +163,16 @@ function addOpcoesDeMarcas() {
 
 function excluirMarca(index) {
   // Validar se existe produto associado
-  marcas.splice(index, 1);
-  localStorage.setItem("marcas", JSON.stringify(marcas));
-  adicionarMarcaATabela();
+  marcas = JSON.parse(localStorage.getItem("marcas"));
+
+  let nomeMarca = marcas[index].nomeMarca;
+  if (!existeProdutoAssociadoMarca(nomeMarca)) {
+    marcas.splice(index, 1);
+    localStorage.setItem("marcas", JSON.stringify(marcas));
+    adicionarMarcaATabela();
+  } else {
+    alert("Marca associada a produto.");
+  }
 }
 
 function excluirProduto(index) {
@@ -185,4 +190,14 @@ function existeMarca(nome) {
   return false;
 }
 
-function existeProdutoAssociadoMarca(nomeMarca) {}
+function existeProdutoAssociadoMarca(nomeMarca) {
+  marcas = JSON.parse(localStorage.getItem("marcas"));
+  produtos = JSON.parse(localStorage.getItem("produtos"));
+  for (p of produtos) {
+    console.log(p.marca);
+    if (p.marca == nomeMarca) {
+      return true;
+    }
+  }
+  return false;
+}
