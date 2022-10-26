@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/general-styles.css" />
+    <title>Challange 14</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: antiquewhite;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+      }
+
+      .auth-container {
+        border: 10px;
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: 10px;
+        max-width: 500px;
+        padding: 20px;
+      }
+
+      .auth-container form {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="auth-container">
+      <form action="">
+        <div class="form-group">
+          Email
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          Password
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            id="password"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Login</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

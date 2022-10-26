@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="../challange-extra.js"></script>
+    <script src="../challange-extra-professor.js"></script>
+
+    <style></style>
+    <title>Challange Exntra</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-group row">
+        <label for="descricao" class="form-label">
+          Descrição
+          <input
+            type="text"
+            name="descricao"
+            id="descricao"
+            class="form-control"
+          />
+        </label>
+      </div>
+      <div class="form-group row">
+        <label for="preco" class="form-label">
+          Preço
+          <input type="number" name="preco" id="preco" class="form-control" />
+        </label>
+      </div>
+      <div class="form-group row">
+        <label for="estoque" class="form-label">
+          Estoque
+          <input
+            type="number"
+            name="estoque"
+            id="estoque"
+            class="form-control"
+          />
+        </label>
+      </div>
+      <div class="form-group row">
+        <label for="unidade-medida" class="form-label">
+          Unidade de medida
+          <input
+            type="text"
+            name="unidade-medida"
+            id="descricao"
+            class="form-control"
+          />
+        </label>
+      </div>
+      <div class="form-group row">
+        <button class="btn btn-primary btn-block" onclick="add(showTable)">
+          Registrar
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <hr />
+    </div>
+
+    <div class="container">
+      <h1>Itens cadastrados</h1>
+    </div>
+
+    <div class="container"></div>
+
+    <div class="container consultas">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Un. medida</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </body>
+</html>

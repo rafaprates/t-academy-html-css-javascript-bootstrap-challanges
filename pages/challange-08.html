@@ -13,58 +13,92 @@
   </head>
   <body>
     <main>
-      <form action="">
-        <div>
-          <label for="time">
-            Informe o horário
-            <input type="time" name="time" id="time" />
-          </label>
-        </div>
+      <div>
+        <label for="user-informed-time">
+          Informe o horário
+          <input type="time" name="user-informed-time" id="current-time" />
+        </label>
+      </div>
 
-        <div>
-          <label for="lisboa">
-            <input type="radio" name="city" id="lisboa" />
-            Lisboa
-          </label>
-        </div>
+      <div>
+        <label for="lisboa">
+          <input type="radio" name="city" id="lisboa" value="lisboa" />
+          Lisboa
+        </label>
+      </div>
 
-        <div>
-          <label for="nova-iorque">
-            <input type="radio" name="city" id="nova-iorque" />
-            Nova Iorque
-          </label>
-        </div>
+      <div>
+        <label for="nova-iorque">
+          <input
+            type="radio"
+            name="city"
+            id="nova-iorque"
+            value="nova-iorque"
+          />
+          Nova Iorque
+        </label>
+      </div>
 
-        <div>
-          <label for="cidade-do-mexico">
-            <input type="radio" name="city" id="cidade-do-mexico" />
-            Cidade do México
-          </label>
-        </div>
+      <div>
+        <label for="cidade-do-mexico">
+          <input
+            type="radio"
+            name="city"
+            id="cidade-do-mexico"
+            value="cidade-do-mexico"
+          />
+          Cidade do México
+        </label>
+      </div>
 
-        <div>
-          <label for="toquio">
-            <input type="radio" name="city" id="toquio" />
-            Tóquio
-          </label>
-        </div>
+      <div>
+        <label for="toquio">
+          <input type="radio" name="city" id="toquio" value="toquio" />
+          Tóquio
+        </label>
+      </div>
 
-        <div>
-          <label for="berlim">
-            <input type="radio" name="city" id="berlim" />
-            Berlim
-          </label>
-        </div>
+      <div>
+        <label for="berlim">
+          <input type="radio" name="city" id="berlim" value="berlim" />
+          Berlim
+        </label>
+      </div>
 
-        <button type="submit" class="btn btn-primary">Obter horário</button>
+      <button onclick="calcularHorario()" type="submit" class="btn btn-primary">
+        Obter horário
+      </button>
 
-        <div>
-          <label for="horario-local">
-            Horário local
-            <output></output>
-          </label>
-        </div>
-      </form>
+      <div>
+        <label for="horario-local">
+          Horário local
+          <br />
+          <output id="output"></output>
+        </label>
+      </div>
     </main>
+
+    <script>
+      function calcularHorario() {
+        var userTimeZoneInMinutes = new Date().getTimezoneOffset();
+        var userTimeZoneInHours = userTimeZoneInMinutes / 60;
+        var currentTime = document.querySelector("#current-time").value;
+
+        console.log("User time zone");
+        console.log(userTimeZoneInHours);
+
+        var chosenOption = document.querySelector(
+          "input[name=city]:checked"
+        ).value;
+
+        var output = document.querySelector("#output");
+
+        // var currentTime = new Date();
+
+        console.log(chosenOption);
+
+        output.innerHTML = horarioAtual;
+      }
+    </script>
   </body>
 </html>
