@@ -11,14 +11,17 @@
     <title>Challange 15</title>
   </head>
   <body>
-    <div class="container login">
+    <!-- 
       <nav class="nav nav-tabs nav-fill">
         <a class="nav-link active" href="challange-15.html">Início</a>
         <a class="nav-link" href="gerenciar-marcas.html">Marcas</a>
         <a class="nav-link" href="gerenciar-produtos.html">Produtos</a>
       </nav>
-
-      <div class="form-group">
+-->
+    <div
+      class="container border d-flex flex-column justify-content-center align-items-center login mt-5"
+    >
+      <div class="form-group mt-3">
         <label for="userName" class="form-label">
           Usuário
           <input
@@ -38,13 +41,22 @@
         </label>
       </div>
 
-      <div class="form-group">
-        <button onclick="authenticateUser()" class="btn btn-primary">
+      <div class="form-group mb-3">
+        <button
+          onclick="autenticarUsuario()"
+          class="btn btn-primary"
+          id="btn-login"
+        >
           Entrar
         </button>
       </div>
+
+      <div class="invisible" id="usuario-nao-encontrado">
+        <p>Usuário ou senha incorretos</p>
+      </div>
     </div>
 
+    <!--
     <hr />
     <div class="container options">
       <h1>Opções</h1>
@@ -70,7 +82,8 @@
       <button class="btn btn-primary">Listar</button>
       <button class="btn btn-primary">Remover</button>
     </div>
+  -->
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
